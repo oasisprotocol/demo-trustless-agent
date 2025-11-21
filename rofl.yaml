@@ -3,11 +3,11 @@ version: 0.1.0
 tee: tdx
 kind: container
 resources:
-  memory: 4096
+  memory: 2048
   cpus: 1
   storage:
     kind: disk-persistent
-    size: 15000
+    size: 10000
 artifacts:
   firmware: https://github.com/oasisprotocol/oasis-boot/releases/download/v0.6.2/ovmf.tdx.fd#db47100a7d6a0c1f6983be224137c3f8d7cb09b63bb1c7a5ee7829d8e994a42f
   kernel: https://github.com/oasisprotocol/oasis-boot/releases/download/v0.6.2/stage1.bin#e5d4d654ca1fa2c388bf64b23fc6e67815893fc7cb8b7cfee253d87963f54973
@@ -32,19 +32,20 @@ deployments:
           min_tcb_evaluation_data_number: 18
           tdx: {}
       enclaves:
-        - id: eXRsIVCBenZ3n3b7dbwT/jrLf5Ay3XDbYkJsKdB3GAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-        - id: bJ+HNcBuiFDHEdB5eCfIciliJJxCCek+6iDn9Yoq77MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+        - id: G+FHYWecwGMwmsc28pCsyTwKVJQfbURs0zO1jKAqjAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+        - id: PbxvrYBIEU1wumoJe8K6JSHKejYg+k31cf47Xb+DJpQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
       endorsements:
         - any: {}
       fees: endorsing_node
       max_expiration: 3
     secrets:
       - name: RPC_URL
-        value: pGJwa1ggEnI0gcUY+yqS1LFtVn7Cu0YktAGeGUqNRuWwEvKwUzJkbmFtZVf1YsPsmF29EiPGxzto/Om/QzzHrl599WVub25jZU8S4fXZCpyhdh4UrNmjpp1ldmFsdWVYTanf4LJTfXHfGpt8Jfy/a43s5iOmxUIn7cTNaazjdAjuhmdj0tXMuGeDH3wa9s73eKEJiPldMmILdBxNT2xYxLT2SfKRgWK6i5oF/jFJ
+        value: pGJwa1gg6Kn06a3QO8j1vmFGxyOrT/vhNqSaly1Omzth0PoOFBlkbmFtZVfUrcZPCglvUGccnuxGDCwneihcNjy5amVub25jZU9uVY7GaA/CiwWssns2iydldmFsdWVYTUHBgdVXr61LambmwRocM+uTleUnq5p6wfLof/WRTL1l38oIEUqJtQRSvRwSXQvc8m++f7i21ZwPWbim/GaYSBXGXIBEIbsSxhLCR3Rx
       - name: PINATA_JWT
-        value: pGJwa1ggyNQ6xFk7nfOWaV/uJqw+KTYNXpF30p8S86Y9qoLCV2hkbmFtZVgaVpWCFXG017aJwP5Hm3QmtTTgwO57xE2BXtNlbm9uY2VPVLABouRZuuR+iT8YieykZXZhbHVlWQLBEJNrKqmizU97g7t3xrBwpMEy2AWJY/+qsCW9pRRPLjZ+VH2RBTNPBAhLnDUM28OSxDoFgiVd5kGW+hf5rVwS2um5AwUvpnMifXVf4t2cP5L45Gi0r5se/qwCAutUcy8PCMropxFfz5ythFBLtjVygMSuXr6AtsSTPbcZItyY0+sq51jCserUtV/Duf3OA/z9p59al8J8I84JcSh4bTAYesLhn0t2RzJs0gpSXY9c0FMDdyX0kH4IevJEMLqxj/loYjaRe+75y0DvXpAee3Silr24D2i8pdN0Sol2nkS7/c0hQZe4zw1xfzrgVBkOm1dCeTVkjZKuRksAeR26h9M30AaEw6YmO+x6xZa/AyRegzExXyxrarU1FXHdMcTkQMTXHec/GU8dhowrF3to+4Tbt5fSfc6JexicZZ3uYxrxBpFlH3FJqbyi/xiHs0TgaJdyv5OS1BLMy4Nr76e/Mw04H/9hYE3zcmo2NUMfHygztICHIWzKgk0dhAf5/GVkzlw8jQZaUqJyVwc4i9CkNoC46qaMaZE2bmfuhYofpyuiq6TXId0Z6xkYrWkfua3Nj5BPVAO2YLE+NbQ8LCBvMfFXfRzGcB0Vkn9yAJ8w9rNLxzemVMcc9Am1+sA4GArPILgkG7W5W6hqi4MtCs7U/g5j3E0Si4sLGrPwCAGUgI1XVfLmBVs7Jc1tKyuermdOi+M9YgDQZnx5XX6RVbLIXd+z4XB5QGIszskNrZp35Kgxv5sl8Hp2A2pFMS+KCYDWoMkHMcP5/dmM/HXGML9y906hpqMlIUES2ck1A4CcsKZLBLW4+9ZbG5oba/VANV/CSRZQH1G23UJ/50hHtWFZHvrdIinI2Tauf6yUHkIGrFNgm7ai6z+ogdCdlmMhZ8LJ8Of44tyUEo7cFMASejr9FeDYsEtHrRaeCbblVG2czjLjqnu6
+        value: pGJwa1ggOl8ReroyXV5fU8E7adadYQyQWai8YOoEHe3a/wZb6DlkbmFtZVgaM5jAh/ae4+hLdspsFwrsLRmY+1ma5HrITw9lbm9uY2VP5raIGUlZvGov7fzkbPZhZXZhbHVlWQLBHxHAsXydA10ohLqaeBH2fmx+2yyPTywRgNoP+Sm5hGpc2cARuoyT9++ho4CT5B0glQYvPpSLMjNnCd7ZLqDkKjxSIK2Y92uXkUTS64HKrTDnFl+po6upG/Y5SridTtYX6/PIisOCN7bUwyxGP7HOKTxVs/pxDBbr6M3vChimLuFq7wkvalTDnJEyAU8EHQ4bmP1AMczln0YurbVBZYYk76y9e1sS8EJRtcRN+OzLRomr0gTYCbKaxw20tE4DiOX6uDj7I2lXYmYx8Bp4ho11XRlKM6E5AGhYv3GDKY2ioh3VqlFDQm1yfQnZXLmygB8UdQM6R8+aRJ2w4rppFx/GTc+se+41ZnTzwJ7SOkJvkrN+rQjVI0AZe5Eox/ooNM/irQRTmvF1+YR5dtMBtsjjlTqCa+/AsbJLp6D0V9qIHTM3dUpt2D9SpOummqjwAg/Ytg9Xt6Rq2dxdGkmUfC1cQwamr18kiFiPMfhuEydpwKPh6rqk3j5yuT5IBCU2ohGMexgyiNLt0Xg7BdasnFy6UDv2XBhNoJMDOoagENI++bnzAz+pot1abdPmwPCZYDpja2lC8nGHAzopNclW5YIMOl9n6YgpLlq8Pwrv41sIoykJRg1lCZuwY4iLWh1jwODJ393zJKhgg5qrWZq6Zm9mvOw1NfgPoOp/swOB9rENogOtYRyR+JpEPpKhbrShxfzB8w3srySJnPpqmaJlrvN+FvM+ShGEmQKe+YzRlMBltLDAqF3euNiH8Cy6h5GeglZ+CHm4RlBxn73fpLksX5U9Fe7X38i93hiMj/8ZbufA0Zh1LoU2Ke6hMqaFcQhyP3rjcqXolOOHQgOAhAmCD4MQnmlkQGCh+Mn/xv8rHUL5AhO0c18By+Bn9/X0UrodBQA0c2SN+WaBedJCISFM/afQS55dt/GvEnRtXlkoY0kkNUmO
+      - name: OPENAI_API_KEY
+        value: pGJwa1gg+xkBbZRla/BVI6+BJJa6JDpwq6LFRnbTS4RpzKVoAFhkbmFtZVgeZFoMiptnnIMVP2+zrHiFy+nkCmANAokpt2QT28CQZW5vbmNlT5qMRJUXo9MgxJVWDib23mV2YWx1ZVi0MUmVmfztz6BFFeKE+D+JVpX/TkWP0684AD1UF1p2K5PhrH5NBEFkcFqD+O76UEtto+fwBHvMnEHi/+T4JrRuZo6yhQQsLJF4O2DAaaq92YeQYSk9va3FY58Qonkx+UA+Pn8qvr8zVHqJe5d6jJg6QFTnkD/bNpndSGUSIju4EdHv6yiZGyLW0a+8dmPlA52tBWY3s2u2jE63fFSKhZfE2LcEf4NaCCY1XFhq7go3+nfUcxgB
     machines:
       default:
         provider: oasis1qp2ens0hsp7gh23wajxa4hpetkdek3swyyulyrmz
         offer: playground_short
-        id: "0000000000000426"
